@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Station - KFTCA Certification Manifesto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .poster-container {
+            width: 800px;
+            height: 1422px;
+            position: relative;
+            background: url('인증마크.png') center top/cover no-repeat;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+
+        /* 상단 옅은 그라데이션 */
+        .top-gradient {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 350px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 3%;
+            left: 4%;
+            width: 92%;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #fff;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin: 0 0 8px 0;
+            line-height: 1.35;
+            text-align: center;
+            text-shadow: 2px 2px 10px #000, 0 0 25px rgba(0,0,0,0.8);
+        }
+
+        .sub-title {
+            font-size: 15px;
+            color: #FFD700;
+            letter-spacing: 3px;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #FFD700;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 10px rgba(255,215,0,0.6);
+        }
+
+        /* 프롤로그 국문 */
+        .prologue {
+            font-size: 15px;
+            color: #f1f3f5;
+            line-height: 1.6;
+            text-align: center;
+            word-break: keep-all;
+            margin: 0 0 8px 0;
+            padding: 0 15px;
+            text-shadow: 2px 2px 5px #000, 0 0 15px #000;
+        }
+
+        .prologue strong {
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        /* 프롤로그 영문 */
+        .prologue-en {
+            font-size: 12.5px;
+            color: #b0c4de;
+            line-height: 1.5;
+            text-align: center;
+            font-weight: 300;
+            margin: 0 0 25px 0;
+            padding: 0 20px;
+            text-shadow: 1px 1px 4px #000, 0 0 10px #000;
+        }
+        
+        .prologue-en strong {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        /* 지그재그 리스트 */
+        .marks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px; 
+        }
+
+        .mark-item {
+            width: 86%;
+            background: rgba(0, 0, 0, 0.1); 
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 20px; 
+            border-radius: 12px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .mark-item:nth-child(odd) {
+            align-self: flex-start;
+            border-left: 4px solid transparent;
+            text-align: left;
+        }
+
+        .mark-item:nth-child(even) {
+            align-self: flex-end;
+            border-right: 4px solid transparent;
+            text-align: right;
+        }
+
+        /* 색상별 테두리 및 4번째 항목(그린)의 상단 강제 여백 추가 */
+        .mark-item.blue { border-left-color: #4A90E2; }
+        .mark-item.gold { border-right-color: #FFD700; }
+        .mark-item.silver { border-left-color: #C0C0C0; }
+        
+        .mark-item.green { 
+            border-right-color: #2ECC71; 
+            margin-top: 130px; /* 조합장님 지시: 박스 1개 분량의 여백으로 아래 2개를 쑥 내림 */
+        }
+        
+        .mark-item.diamond { border-left-color: #00FFFF; }
+
+        .mark-title {
+            font-size: 15.5px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 1px 1px 3px #000, 0 0 10px #000;
+        }
+
+        .mark-item:nth-child(odd) .mark-title { justify-content: flex-start; }
+        .mark-item:nth-child(even) .mark-title { justify-content: flex-end; flex-direction: row-reverse; }
+
+        .mark-title span {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+
+        .tag-blue { background: rgba(74, 144, 226, 0.25); color: #8ab4f8; border: 1px solid rgba(74, 144, 226, 0.4); }
+        .tag-gold { background: rgba(255, 215, 0, 0.25); color: #FFD700; border: 1px solid rgba(255, 215, 0, 0.4); }
+        .tag-silver { background: rgba(192, 192, 192, 0.25); color: #e2e2e2; border: 1px solid rgba(192, 192, 192, 0.4); }
+        .tag-green { background: rgba(46, 204, 113, 0.25); color: #69f0ae; border: 1px solid rgba(46, 204, 113, 0.4); }
+        .tag-diamond { background: rgba(0, 255, 255, 0.2); color: #84ffff; border: 1px solid rgba(0, 255, 255, 0.4); }
+
+        /* 국문 설명 */
+        .mark-desc {
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.45;
+            word-break: keep-all;
+            margin: 0 0 4px 0;
+            text-shadow: 1px 1px 2px #000, 0 0 8px #000, 0 0 15px rgba(0,0,0,0.8);
+        }
+
+        /* 영문 설명 */
+        .mark-desc-en {
+            font-size: 12px;
+            color: #b0c4de; 
+            line-height: 1.35;
+            font-weight: 400;
+            margin: 0;
+            text-shadow: 1px 1px 2px #000, 0 0 8px #000;
+        }
+
+        .bottom-gradient {
+            position: absolute;
+            bottom: 0; left: 0; right: 0; height: 200px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0.95) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="poster-container">
+    
+    <div class="top-gradient"></div>
+
+    <div class="content-wrapper">
+        <h1 class="main-title">타협할 수 없는 절대 기준,<br>K-푸드의 자부심을 증명하다</h1>
+        <div class="sub-title">KFTCA Premium Certification Policy</div>
+        <div class="divider"></div>
+        
+        <p class="prologue">
+            <strong>한국K푸드화장품수출입조합(KFTCA)</strong>의 인증마크는 전 세계 소비자에게 드리는 가장 단단한 약속입니다.<br>
+            <strong>유해물질 없는 깨끗한 원재료</strong>를 엄선하며, 한 치의 오차도 없는 <strong>청결한 환경에서 제조</strong>됩니다. 나아가 <strong>제조 전 과정을 투명하게 공개</strong>하는 신뢰를 바탕으로, <strong>한국 전통의 레시피로 진짜 한국의 맛</strong>을 전 세계에 알립니다.
+        </p>
+        <p class="prologue-en">
+            The certification mark of the <strong>Korea K-Food & Cosmetics Trade Association(KFTCA)</strong> is our firmest promise to consumers worldwide. We carefully select <strong>clean ingredients free from harmful substances</strong> and manufacture in a <strong>flawlessly hygienic environment</strong>. Based on the trust of <strong>transparently disclosing the entire manufacturing process</strong>, we introduce <strong>the true taste of Korea</strong> to the world through traditional recipes.
+        </p>
+
+        <div class="marks-list">
+            <!-- 1. 좌측 -->
+            <div class="mark-item blue">
+                <div class="mark-title">Global Standard <span class="tag-blue">BLUE</span></div>
+                <p class="mark-desc">한국 전통의 레시피로 한국의 진짜 맛을 전 세계에 알리는 글로벌 수출 규격 및 품질 보증.</p>
+                <p class="mark-desc-en">Global export standard & quality assurance introducing authentic Korean flavors to the world.</p>
+            </div>
+
+            <!-- 2. 우측 -->
+            <div class="mark-item gold">
+                <div class="mark-title">Traditional Recipe & Master <span class="tag-gold">GOLD</span></div>
+                <p class="mark-desc">오랜 세월을 지켜온 명인의 장인정신과 타협하지 않는 최고급 프리미엄 브랜드 보증.</p>
+                <p class="mark-desc-en">Guarantee of uncompromising premium brands and the craftsmanship of masters who preserve tradition.</p>
+            </div>
+
+            <!-- 3. 좌측 -->
+            <div class="mark-item silver">
+                <div class="mark-title">Perfect Hygiene Environment <span class="tag-silver">SILVER</span></div>
+                <p class="mark-desc">외부 오염을 원천 차단하는 무결점 첨단 위생 설비와 가장 청결한 제조 환경 보증.</p>
+                <p class="mark-desc-en">Guarantee of the cleanest manufacturing environment and flawless advanced hygiene facilities.</p>
+            </div>
+
+            <!-- 4. 우측 (여기에 위쪽 여백 130px가 들어가서 밑으로 뚝 떨어집니다!) -->
+            <div class="mark-item green">
+                <div class="mark-title">Clean & Healthy Ingredients <span class="tag-green">GREEN</span></div>
+                <p class="mark-desc">인체에 유해한 물질이 완벽히 배제된, 대자연이 키운 깨끗하고 건강한 청정 원재료 보증.</p>
+                <p class="mark-desc-en">Guarantee of clean and healthy ingredients grown by nature, completely free from harmful substances.</p>
+            </div>
+
+            <!-- 5. 좌측 -->
+            <div class="mark-item diamond">
+                <div class="mark-title">100% Transparent Process <span class="tag-diamond">DIAMOND</span></div>
+                <p class="mark-desc">원물 채취부터 최종 포장까지, 소비자가 완벽히 신뢰할 수 있도록 제조 전 과정 투명성 보증.</p>
+                <p class="mark-desc-en">Guarantee of 100% transparency in the entire manufacturing process, from raw materials to final packaging.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-gradient"></div>
+
+</div>
+
+</body>
+</html>

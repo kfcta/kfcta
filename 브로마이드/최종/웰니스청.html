@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Food Poster (Hall 6)</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #111;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster {
+            width: 800px; 
+            height: 1422px; 
+            position: relative;
+            background-image: url('웰니스청.png'); 
+            background-size: cover; 
+            background-position: center top;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+        
+        /* 텍스트 가독성을 위한 상단 부드러운 그라데이션 (하단의 숟가락과 과일청은 100% 투명하게 보존) */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 60%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 우측 상단 55px 큼직한 KFTCA 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .mark-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,215,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 상단 텍스트 그룹 (배경 박스 완전 제거) */
+        .text-area {
+            position: absolute;
+            top: 8%; 
+            left: 4%; 
+            width: 92%;
+            text-align: center;
+            z-index: 5;
+        }
+
+        /* 🍋 메인 타이틀: 상큼한 유자~루비레드 그라데이션 + 느낌표 + 강력한 블랙 섀도우 */
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 42px;
+            margin: 0 0 15px 0;
+            letter-spacing: -1.5px;
+            line-height: 1.35;
+            background: linear-gradient(135deg, #FBC02D 0%, #E64A19 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95));
+        }
+
+        /* 영문 서브 타이틀 (골드 컬러) */
+        .sub-title {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #FFB300;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9);
+        }
+
+        /* 국문 본문 (화이트 텍스트 + 다중 블랙 섀도우) */
+        .prologue {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 17.5px;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.75;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 15px #000,
+                0px 0px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        /* 골드 구분선 */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #FFD700;
+            margin: 25px auto;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* 영문 본문 */
+        .prologue-en {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 14px; 
+            font-weight: 300; 
+            color: #e2e8f0;
+            line-height: 1.65;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 12px #000,
+                0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <!-- 텍스트 가독성을 올려주는 상단 그라데이션 -->
+        <div class="gradient-overlay"></div>
+        
+        <!-- 55px 대형 인증마크 -->
+        <div class="cert-marks">
+            <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+            <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="text-area">
+            <!-- 역동적인 느낌표(!) 유지 -->
+            <h1 class="main-title">끓이지 않아 살아 숨 쉬는 자연의 단맛!<br>K-웰니스 청.</h1>
+            <div class="sub-title">Raw Vitality of Nature : Premium K-Wellness Cheong</div>
+            
+            <!-- 의미 단위로 자연스럽게 끊어준 국문 본문 -->
+            <div class="prologue">
+                서양의 잼과 달리 K-푸드의 지혜가 담긴 '청'은<br>
+                열을 가하지 않고 서서히 숙성시켜<br>
+                과육의 아삭한 식감이 그대로 살아있습니다.<br>
+                한 숟갈 떠올리는 순간 부드럽게 흐르는<br>
+                황금빛 과즙과 상큼한 과일의 조화.<br>
+                브런치부터 티타임까지,<br>
+                코리아 스테이션이 제안하는<br>
+                가장 맑고 건강한 프리미엄 디저트를 만나보세요.
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- 의미 단위로 자연스럽게 끊어준 영문 본문 -->
+            <div class="prologue-en">
+                Unlike Western jams, 'Cheong' embodies the wisdom of K-food.<br>
+                Slowly aged without heat, it perfectly preserves<br>
+                the crisp texture of the fruit flesh.<br>
+                The moment you scoop it up, experience the harmony of<br>
+                gently flowing golden syrup and fresh fruits.<br>
+                From brunch to tea time,<br>
+                discover the clearest and healthiest premium dessert<br>
+                offered by Korea Station.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

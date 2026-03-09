@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Station - K-Premium Tube Meal (Hall 7)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .poster-container {
+            width: 800px;
+            height: 1422px;
+            position: relative;
+            background: url('짜식.png') center top/cover no-repeat;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+
+        /* 텍스트 가독성을 위한 상하단 그라데이션 (배경을 최대한 살리기 위해 중앙부 투명도 100% 확보) */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.85) 100%);
+            pointer-events: none;
+        }
+
+        /* 우측 상단 초고화질 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .mark-img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            backdrop-filter: blur(2px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 상단 국문 텍스트 영역 (박스 배경 및 테두리 완전히 제거!) */
+        .text-box {
+            position: absolute;
+            top: 6%;
+            left: 5%;
+            width: 90%;
+            text-align: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 5;
+            background: transparent; /* 완벽한 투명화 */
+            border: none; /* 테두리 제거 */
+            backdrop-filter: none; /* 블러 제거 */
+        }
+
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 34px;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            line-height: 1.3;
+            /* 박스가 사라진 대신 엄청나게 강력한 3중 텍스트 섀도우 적용 */
+            text-shadow: 2px 2px 5px #000, 0 0 15px #000, 0 0 30px rgba(0,0,0,0.9);
+        }
+
+        .sub-title {
+            font-size: 18px;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px #000, 0 0 10px #000;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #FFD700;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 10px rgba(255,215,0,0.8);
+        }
+
+        .prologue {
+            font-size: 16px;
+            color: #f1f3f5;
+            line-height: 1.7;
+            word-break: keep-all;
+            margin: 0;
+            font-weight: 400;
+            text-shadow: 1px 1px 3px #000, 0 0 10px #000, 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        /* 하단 영문 텍스트 영역 */
+        .bottom-text-box {
+            position: absolute;
+            bottom: 4%;
+            left: 5%;
+            width: 90%;
+            text-align: center;
+            z-index: 5;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .prologue-en {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 14.5px;
+            color: #ffffff;
+            line-height: 1.6;
+            font-weight: 300;
+            margin: 0;
+            text-shadow: 1px 1px 3px #000, 0 0 10px #000, 0 0 20px rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+<body>
+
+<div class="poster-container">
+    <div class="gradient-overlay"></div>
+    
+    <div class="cert-marks">
+        <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+        <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+    </div>
+
+    <div class="text-box">
+        <h1 class="main-title">숟가락은 필요 없습니다.<br>한 손으로 짜서 즐기는 완벽한 한 끼</h1>
+        <div class="sub-title">Squeeze the Flavor : The Ultimate K-Food on the Go</div>
+        <div class="divider"></div>
+        <p class="prologue">
+            길거리를 걸으면서도, 바쁜 업무 중에도 흘림 없이 깔끔하게.<br>
+            한국의 소울푸드인 불향 가득한 제육, <br> 달콤한 불고기, 그리고 감칠맛 나는 잡채밥이 혁신적인 튜브에 담겼습니다.<br>
+            가볍게 밀어 올려 입안 가득 꽉 차오르는 든든한 한 끼를 경험해 보세요.<br>
+            컵밥의 불편함을 완벽하게 지워낸 K-프리미엄 간편식의 새로운 기준입니다.
+        </p>
+    </div>
+
+    <div class="bottom-text-box">
+        <p class="prologue-en">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            Enjoy a neat, spill-free meal whether you're walking on the street or busy at work.<br>
+            Korea's soul food smoky spicy pork, sweet bulgogi,<br> and savory japchaeis now served in an innovative tube.<br>
+            Just give it a gentle squeeze to experience a hearty, mouth-filling bite.<br>
+            Setting a new standard for K-premium convenience <br>food by completely eliminating the hassle of cup rice.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

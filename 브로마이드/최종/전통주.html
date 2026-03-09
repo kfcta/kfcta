@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Food Poster (Hall 5)</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #111;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster {
+            width: 800px; 
+            height: 1422px; 
+            position: relative;
+            background-image: url('전통주.png'); 
+            background-size: cover; 
+            background-position: center top;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+        
+        /* 텍스트 가독성을 위한 상단 부드러운 그라데이션 (중앙의 잔과 약재는 100% 투명하게 보존) */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 60%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 우측 상단 55px 대형 KFTCA 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .mark-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,215,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 상단 텍스트 그룹 (유리 박스 완전 제거) */
+        .text-area {
+            position: absolute;
+            top: 8%; 
+            left: 4%; 
+            width: 92%;
+            text-align: center;
+            z-index: 5;
+        }
+
+        /* 🍶 메인 타이틀: 약주의 맑은 황금빛을 표현한 앰버 골드 그라데이션 + 느낌표 강조 */
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 42px;
+            margin: 0 0 15px 0;
+            letter-spacing: -1.5px;
+            line-height: 1.35;
+            background: linear-gradient(135deg, #FFE082 0%, #FF8F00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95));
+        }
+
+        /* 영문 서브 타이틀 (산삼/구기자의 붉은빛을 살짝 가미한 코랄 골드) */
+        .sub-title {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #FFB300;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9);
+        }
+
+        /* 국문 본문 (화이트 텍스트 + 다중 블랙 섀도우) */
+        .prologue {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 17.5px;
+            font-weight: 400; 
+            color: #ffffff;
+            line-height: 1.75;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 15px #000,
+                0px 0px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        /* 골드 구분선 */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #FFD700;
+            margin: 25px auto;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* 영문 본문 (자연스러운 줄바꿈) */
+        .prologue-en {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 14px; 
+            font-weight: 300; 
+            color: #e2e8f0;
+            line-height: 1.65;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 12px #000,
+                0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="gradient-overlay"></div>
+        
+        <div class="cert-marks">
+            <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+            <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="text-area">
+            <!-- 쉼표(,)를 느낌표(!)로 수정하여 임팩트 강화 -->
+            <h1 class="main-title">취하기 위함이 아닌!<br>몸을 살리기 위해 빚어낸 황금빛 한 잔.</h1>
+            <div class="sub-title">The Healing Elixir : Premium Master Craft Yakju</div>
+            
+            <div class="prologue">
+                한국의 전통주는 '약주(藥酒)'라고도 불립니다.<br>
+                몸에 좋은 재료로 건강하게 만든다는 의미입니다.<br>
+                술이 아닌 귀한 '약'을 빚는 마음으로 완성했습니다.<br>
+                맑은 산천수에 산삼, 구기자 등 진귀한 한약재를<br>
+                아낌없이 담아 오랜 시간 숙성시켰습니다.<br>
+                한 모금 머금는 순간 입안 가득 퍼지는<br>
+                깊은 향기와 부드러운 목 넘김.<br>
+                건강까지 생각하는 K-프리미엄 전통주로<br>
+                지친 몸과 마음에 따뜻한 치유의 시간을 선물하세요.
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="prologue-en">
+                Korean traditional liquor is often called 'Yakju,' meaning medicinal wine.<br>
+                This reflects our philosophy of brewing with healthy, beneficial ingredients.<br>
+                Crafted with the heart of making a precious medicine<br>
+                rather than just an alcoholic drink,<br>
+                it is aged for a long time with pure mountain spring water<br>
+                and rare herbs like wild ginseng and goji berries.<br>
+                The moment you take a sip,<br>
+                a deep aroma fills your mouth with a smooth finish.<br>
+                Gift yourself a warm, healing time for your exhausted body and mind<br>
+                with our health-conscious K-premium liquor.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

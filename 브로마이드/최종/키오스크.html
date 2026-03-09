@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - O2O Smart Retail Poster</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+        
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: #050505; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        
+        .poster { 
+            width: 800px; 
+            height: 1422px; 
+            position: relative; 
+            background-color: #050505; 
+            background-image: url('키오스크.png'); 
+            background-size: 100%; 
+            background-position: center bottom; 
+            background-repeat: no-repeat;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.9); 
+            overflow: hidden; 
+        }
+        
+        .gradient-overlay { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            height: 55%; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%); 
+            pointer-events: none; 
+        }
+        
+        .cert-marks { 
+            position: absolute; 
+            top: 35px; 
+            right: 35px; 
+            display: flex; 
+            gap: 15px; 
+            z-index: 10; 
+        }
+        
+        /* 인증마크 테두리도 다시 골드 톤으로 복구 */
+        .mark-img { 
+            width: 55px; 
+            height: 55px; 
+            object-fit: contain; 
+            border-radius: 50%; 
+            background: rgba(0,0,0,0.4); 
+            border: 1px solid rgba(255,215,0,0.5); 
+            backdrop-filter: blur(4px); 
+            padding: 4px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8); 
+        }
+        
+        .text-area { 
+            position: absolute; 
+            top: 120px; 
+            left: 4%; 
+            width: 92%; 
+            text-align: center; 
+            z-index: 5; 
+        }
+        
+        /* 시리즈 통일감을 위한 시그니처 골드 그라데이션 */
+        .main-title { 
+            font-family: 'GmarketSansMedium', sans-serif; 
+            font-size: 38px; 
+            margin: 0 0 12px 0; 
+            letter-spacing: -1.5px; 
+            line-height: 1.35; 
+            background: linear-gradient(135deg, #FFE082 0%, #FF8F00 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95)); 
+        }
+        
+        /* 서브 타이틀 골드 톤 복구 */
+        .sub-title { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 16.5px; 
+            font-weight: 600; 
+            color: #FFB300; 
+            margin-bottom: 25px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9); 
+            line-height: 1.4; 
+        }
+        
+        .prologue { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 16px; 
+            color: #fff; 
+            line-height: 1.7; 
+            margin: auto; 
+            width: 95%; 
+            text-shadow: 2px 2px 5px #000, 0px 0px 15px #000, 0px 0px 25px rgba(0,0,0,0.9); 
+        }
+        
+        /* 구분선 골드 톤 복구 */
+        .divider { 
+            width: 50px; 
+            height: 2px; 
+            background: #FFD700; 
+            margin: 25px auto; 
+            box-shadow: 0 0 10px rgba(255,215,0,0.6); 
+        }
+        
+        .prologue-en { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 13.5px; 
+            color: #e2e8f0; 
+            line-height: 1.6; 
+            margin: auto; 
+            width: 95%; 
+            text-shadow: 2px 2px 5px #000, 0px 0px 12px #000, 0px 0px 20px rgba(0,0,0,0.9); 
+        }
+    </style>
+</head>
+<body>
+<div class="poster">
+    <div class="gradient-overlay"></div>
+    <div class="cert-marks">
+        <img src="인증마크1.png" class="mark-img" onerror="this.style.display='none'">
+        <img src="인증마크2.png" class="mark-img" onerror="this.style.display='none'">
+    </div>
+    <div class="text-area">
+        <!-- 요청하신 '연결하는' 뒤 줄바꿈 적용 -->
+        <h1 class="main-title">터치 한 번으로 열리는 무한한 쇼핑 유니버스!<br>온·오프라인을 완벽히 연결하는<br>O2O 스마트 플랫폼.</h1>
+        <div class="sub-title">BEYOND BOUNDARIES :<br>O2O SMART RETAIL PLATFORM</div>
+        
+        <div class="prologue">
+            단순한 구매를 넘어, 상상하던 모든 쇼핑이 이 혁신적인 키오스크 하나로 완성됩니다.<br>
+            현장에 진열된 매력적인 상품들을 간편하게 대량 구매하고 특별한 할인 혜택까지 누려보세요.<br>
+            기기에 없는 온라인 전용 상품도 스크린을 통해 즉시 검색하고 결제할 수 있으며,<br>
+            온라인 몰에서 미리 주문한 제품을 기다림 없이 현장에서 바로 수령하는 스마트 픽업까지 지원합니다.<br>
+            시공간의 제약을 허물고 당신의 일상에 가장 진화된 방식으로 연결되는 미래형 리테일을 경험하세요.
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="prologue-en">
+            Beyond simple purchasing, this innovative kiosk completes your ultimate shopping experience.<br>
+            Easily purchase displayed items in bulk and enjoy special discount benefits with just a touch.<br>
+            Instantly search and buy online-exclusive products directly through the interactive screen,<br>
+            and use the smart pick-up service to instantly receive items pre-ordered online.<br>
+            Breaking the boundaries of time and space, discover the futuristic retail platform<br>
+            that connects with your daily life in the most evolved and smartest way.
+        </div>
+    </div>
+</div>
+</body>
+</html>

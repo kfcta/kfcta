@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>K-Beauty Smart Kiosk</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e2e8f0; /* 기기가 돋보이도록 옅은 배경 */
+        }
+        
+        /* 1. 기기 뼈대 (배경) */
+        .vending-machine {
+            position: relative;
+            width: 600px;  /* 화면에 보여질 기기 전체 가로 크기 */
+            height: 1200px; /* 1:2 비율 */
+            
+            /* 👇 닷홈에 올리신 최종 기기 이미지 주소로 변경하세요 */
+            background-image: url('스킨케어자판기.png'); 
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4); /* 고급스러운 바닥 그림자 */
+        }
+        
+        /* 2. 브로마이드 합성 (스크린 영역) */
+        .screen-overlay {
+            position: absolute;
+            
+            /* ⚠️ 이 4개의 퍼센트(%) 수치를 조절하여 까만 화면 베젤 안에 쏙 들어가게 맞춥니다 */
+            top: 13.5%;    /* 위에서부터의 여백 */
+            left: 5.5%;    /* 왼쪽에서부터의 여백 */
+            width: 41.5%;  /* 스크린의 가로 너비 */
+            height: 48.5%; /* 스크린의 세로 길이 (결제구 위까지) */
+            
+            /* 👇 조합장님 서버에 있는 원본 브로마이드 주소 (그대로 두시면 됩니다) */
+            background-image: url('스킨케어.png');
+            background-size: cover;
+            background-position: center;
+            
+            /* 디스플레이 텍스처 & 네온 빛 번짐 효과 (진짜 화면처럼 보이게 함) */
+            border-radius: 4px; /* 모서리 살짝 둥글게 */
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.6), 0 0 20px rgba(100, 200, 255, 0.35);
+            opacity: 0.95; /* 화면 특유의 약간의 투명도 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vending-machine">
+        <!-- 기기 좌측 상단에 들어가는 디지털 스크린 -->
+        <div class="screen-overlay"></div>
+    </div>
+
+</body>
+</html>

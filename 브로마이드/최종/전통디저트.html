@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Dessert Poster (Hall 8)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body { 
+            margin: 0; padding: 0; 
+            background: #111; 
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; 
+        }
+        
+        .poster { 
+            width: 800px; 
+            height: 1422px; 
+            position: relative; 
+            background: url('전통디저트.png') center top/cover no-repeat; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8); 
+            overflow: hidden; 
+        }
+
+        /* 텍스트 가독성을 위한 상단 부드러운 그라데이션 (약과/떡 이미지는 100% 투명하게 보존) */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 60%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 우측 상단 55px 대형 KFTCA 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .mark-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,215,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 텍스트 영역 (반투명 박스 완전 제거) */
+        .text-area { 
+            position: absolute; 
+            top: 9%; 
+            left: 4%; 
+            width: 92%; 
+            text-align: center; 
+            z-index: 5;
+        }
+
+        /* 메인 타이틀 (조청 빛깔 골드 그라데이션 + 강력한 드롭 섀도우) */
+        .main-title { 
+            font-family: 'GmarketSansMedium', sans-serif; 
+            font-size: 42px; 
+            margin: 0 0 15px; 
+            letter-spacing: -1.5px; 
+            line-height: 1.35; 
+            background: linear-gradient(135deg, #FFE082 0%, #FF6F00 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95)); 
+        }
+
+        /* 영문 서브 타이틀 */
+        .sub-title { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 19px; 
+            font-weight: 600; 
+            color: #FFD700; 
+            margin-bottom: 25px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9); 
+        }
+
+        /* 국문 본문 (화이트 텍스트 + 다중 블랙 섀도우) */
+        .prologue { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 17.5px; 
+            font-weight: 400; 
+            color: #ffffff; 
+            line-height: 1.75; 
+            margin: 0 auto; 
+            width: 100%; 
+            text-shadow: 2px 2px 5px #000, 0 0 15px #000, 0 0 25px rgba(0,0,0,0.9); 
+        }
+
+        /* 골드 구분선 */
+        .divider { 
+            width: 50px; 
+            height: 2px; 
+            background: #FFD700; 
+            margin: 25px auto; 
+            box-shadow: 0 0 10px rgba(255,215,0,0.6); 
+        }
+
+        /* 영문 본문 (자연스러운 줄바꿈) */
+        .prologue-en { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 14px; 
+            font-weight: 300; 
+            color: #e2e8f0; 
+            line-height: 1.65; 
+            margin: 0 auto; 
+            width: 100%; 
+            text-shadow: 2px 2px 5px #000, 0 0 12px #000, 0 0 20px rgba(0,0,0,0.9); 
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="gradient-overlay"></div>
+        
+        <!-- 55px 큼직한 인증마크 -->
+        <div class="cert-marks">
+            <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+            <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="text-area">
+            <h1 class="main-title">조청이 깊이 스민 쫀득한 달콤함!<br>커피와 완벽해진 K-디저트.</h1>
+            <div class="sub-title">Timeless Sweetness : Premium K-Dessert & Snack</div>
+            
+            <div class="prologue">
+                건강을 먼저 생각하는 한국의 전통 디저트를 소개합니다.<br>
+                달콤한 조청에 깊이 재워 완성한 전통 약과.<br>
+                겉은 윤기가 흐르고 속은 촉촉하며 꾸덕한 식감이 일품입니다.<br>
+                은은한 단맛과 다채로운 색감의 떡은 차는 물론<br>
+                현대적인 커피와도 완벽한 조화를 이룹니다.<br>
+                세월이 빚어낸 한국 전통 디저트의 우아한 매력과<br>
+                건강을 함께 경험해 보세요.
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="prologue-en">
+                Introducing Korean traditional desserts that prioritize your health.<br>
+                Traditional Yakgwa, perfected by being deeply soaked in sweet rice syrup,<br>
+                boasts a glossy exterior with an exquisitely moist and chewy inside.<br>
+                The subtle sweetness and colorful variety of Korean rice cakes<br>
+                harmonize perfectly with both traditional tea and modern coffee.<br>
+                Experience the elegant charm and healthy benefits of<br>
+                time-honored Korean traditional desserts.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

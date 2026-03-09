@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Food Poster (Hall 4)</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #111;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster {
+            width: 800px; 
+            height: 1422px; 
+            position: relative;
+            background-image: url('비법소스.png'); 
+            background-size: cover; 
+            background-position: center top;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+        
+        /* 텍스트 가독성을 위한 상단 부드러운 그라데이션 */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 60%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 55px 대형 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .mark-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,215,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 상단 텍스트 그룹 (완전 투명) */
+        .text-area {
+            position: absolute;
+            top: 10%; 
+            left: 4%; 
+            width: 92%;
+            text-align: center;
+            z-index: 5;
+        }
+
+        /* 메인 타이틀 */
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 42px;
+            margin: 0 0 15px 0;
+            letter-spacing: -1.5px;
+            line-height: 1.35;
+            background: linear-gradient(135deg, #FFE082 0%, #FF6F00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95));
+        }
+
+        /* 영문 서브 타이틀 */
+        .sub-title {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #FFD700;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9);
+        }
+
+        /* 한글 본문 (자연스러운 줄바꿈을 위해 <br> 태그에 맞춰 정렬) */
+         .prologue {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 17.5px; /* 줄바꿈 시 공간 확보를 위해 폰트 크기 미세 조정 */
+            font-weight: 400; 
+            color: #ffffff;
+            line-height: 1.75;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 15px #000,
+                0px 0px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        /* 골드 구분선 */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #FFD700;
+            margin: 25px auto;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* 영문 본문 */
+        .prologue-en {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 14px; 
+            font-weight: 300; 
+            color: #e2e8f0;
+            line-height: 1.65;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 12px #000,
+                0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="gradient-overlay"></div>
+        
+        <div class="cert-marks">
+            <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+            <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="text-area">
+            <!-- 쉼표(,)를 느낌표(!)로 수정 완료 -->
+            <h1 class="main-title">오랜 시간이 빚어낸 깊은 풍미!<br>요리의 마법이 되다.</h1>
+            <div class="sub-title">The Art of Fermentation : Premium K-Secret Sauce & Oil</div>
+            
+            <div class="prologue">
+                올리브유를 뛰어넘는 고소함을 선사하는 참기름,<br>
+                그리고 수백 년을 이어온 한국의 전통 발효 방식과<br>
+                장인의 고집이 투박한 옹기 속에 고스란히 담겼습니다.<br>
+                자연이 허락한 시간 동안 서서히 깊어진 된장의 구수함과,<br>
+                입맛을 돋우는 고추장의 깔끔한 매운맛.<br>
+                한식은 물론 샐러드, 파스타, 스테이크 등 어떤 글로벌 요리에도<br>
+                완벽하게 스며들어 숨겨진 감칠맛을 끌어냅니다.<br>
+                전 세계 미슐랭 셰프들이 극찬하는 마법의 K-비법 소스를<br>
+                당신의 주방에 초대하세요.
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="prologue-en">
+                Sesame oil offering a savory richness that surpasses olive oil,<br>
+                alongside Korea's centuries-old traditional fermentation methods<br>
+                and artisan dedication, perfectly captured in rustic earthenware.<br>
+                The deep, savory flavor of Doenjang, slowly enriched by the passage of time,<br>
+                and the clean, spicy kick of Gochujang that stimulates the appetite.<br>
+                Seamlessly blending into any global dish—from salads and pastas to steaks—<br>
+                bringing out hidden umami.<br>
+                Invite the magical K-secret sauce, highly praised by Michelin-starred chefs worldwide,<br>
+                into your kitchen.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

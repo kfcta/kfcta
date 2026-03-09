@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Food Poster (Hall 2)</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #111;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster {
+            width: 800px; 
+            height: 1422px; 
+            position: relative;
+            background-image: url('찌개.png'); 
+            background-size: cover; 
+            background-position: center top;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+        
+        /* 텍스트 가독성을 위한 상단 부드러운 그라데이션 (하단 뚝배기와 김은 선명하게) */
+        .gradient-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 60%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        /* 55px 대형 KFTCA 인증마크 */
+        .cert-marks {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .mark-img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,215,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        /* 상단 텍스트 영역 */
+        .text-area {
+            position: absolute;
+            top: 7%; 
+            left: 4%; 
+            width: 92%;
+            text-align: center;
+            z-index: 5;
+        }
+
+        /* 메인 타이틀: 찌개의 펄펄 끓는 열기를 담은 앰버 골드 그라데이션 */
+        .main-title {
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 42px;
+            margin: 0 0 15px 0;
+            letter-spacing: -1.5px;
+            line-height: 1.35;
+            background: linear-gradient(135deg, #FFE082 0%, #FF8F00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95));
+        }
+
+        /* 영문 서브 타이틀 */
+        .sub-title {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #FFB300;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9);
+            line-height: 1.4;
+        }
+
+        /* 국문 본문 */
+        .prologue {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 17px;
+            font-weight: 400; 
+            color: #ffffff;
+            line-height: 1.75;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 15px #000,
+                0px 0px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        /* 골드 구분선 */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #FFD700;
+            margin: 25px auto;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* 영문 본문 */
+        .prologue-en {
+            font-family: 'Pretendard', sans-serif;
+            font-size: 13.5px; 
+            font-weight: 300; 
+            color: #e2e8f0;
+            line-height: 1.65;
+            margin: 0 auto;
+            width: 100%;
+            text-shadow: 
+                2px 2px 5px #000, 
+                0px 0px 12px #000,
+                0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="gradient-overlay"></div>
+        
+        <div class="cert-marks">
+            <img src="인증마크1.png" alt="인증마크1" class="mark-img" onerror="this.style.display='none'">
+            <img src="인증마크2.png" alt="인증마크2" class="mark-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="text-area">
+            <!-- 💡 조합장님의 피라미드형 3단 줄바꿈 기법 적용 -->
+            <h1 class="main-title">보글보글 끓어오르는<br>한국의 소울푸드!<br>영혼까지 데워줄 궁극의 찌개.</h1>
+            
+            <!-- 💡 영문 타이틀 2단 줄바꿈 기법 적용 -->
+            <div class="sub-title">BUBBLING KOREAN SOUL FOOD :<br>THE ULTIMATE STEW THAT WARMS YOUR VERY SOUL</div>
+            
+            <div class="prologue">
+                K-드라마에서 주인공들이 땀을 흘리며 맛있게 먹던 그 찌개,<br>
+                이제 당신의 눈앞에서 로봇셰프가 끓여드립니다!<br>
+                깊게 숙성된 김치의 감칠맛이 폭발하는 '돼지고기 듬뿍 김치찌개',<br>
+                실크처럼 부드러운 연두부와 얼큰한 해물 육수가 조화를 이루는 '해물 순두부찌개',<br>
+                그리고 햄과 치즈가 가득 들어가 글로벌 입맛을 사로잡은<br>
+                퓨전의 정수 '프리미엄 부대찌개'까지!<br>
+                90초 만에 완성되는 매콤하고 뜨거운 한식 국물 요리의 진수를 경험하세요.
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="prologue-en">
+                That mouth-watering, bubbling stew you saw the main characters eating in K-Dramas?<br>
+                Our Robot Chef is now brewing it right before your eyes!<br>
+                Experience the deep umami of aged kimchi in our 'Classic Pork & Kimchi Stew',<br>
+                the fantastic harmony of silky tofu and spicy seafood broth in the 'Spicy Seafood Soft Tofu Stew',<br>
+                or the ultimate fusion dish loaded with ham and cheese, the 'Premium Korean Army Stew'!<br>
+                Experience the essence of spicy, piping-hot Korean stews ready in just 90 seconds.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

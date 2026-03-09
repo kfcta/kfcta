@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Korea Station - K-Pop Poster (Treasure Box)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+        
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: #050505; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        
+        .poster { 
+            width: 800px; 
+            height: 1422px; 
+            position: relative; 
+            background-color: #050505; 
+            background-image: url('K팝.png'); 
+            background-size: 100%; 
+            background-position: center bottom; 
+            background-repeat: no-repeat;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.9); 
+            overflow: hidden; 
+        }
+        
+        /* 빛나는 응원봉과 자개함을 가리지 않도록 상단에만 부드러운 다크 그라데이션 적용 */
+        .gradient-overlay { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            height: 50%; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 35%, rgba(0,0,0,0) 100%); 
+            pointer-events: none; 
+        }
+        
+        .cert-marks { 
+            position: absolute; 
+            top: 35px; 
+            right: 35px; 
+            display: flex; 
+            gap: 15px; 
+            z-index: 10; 
+        }
+        
+        .mark-img { 
+            width: 55px; 
+            height: 55px; 
+            object-fit: contain; 
+            border-radius: 50%; 
+            background: rgba(0,0,0,0.4); 
+            border: 1px solid rgba(255,215,0,0.5); 
+            backdrop-filter: blur(4px); 
+            padding: 4px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8); 
+        }
+        
+        .text-area { 
+            position: absolute; 
+            top: 5%; 
+            left: 4%; 
+            width: 92%; 
+            text-align: center; 
+            z-index: 5; 
+        }
+        
+        /* 응원봉의 네온 빛깔(블루, 핑크)과 자개의 황금빛을 결합한 특수 그라데이션 */
+        .main-title { 
+            font-family: 'GmarketSansMedium', sans-serif; 
+            font-size: 38px; 
+            margin: 0 0 12px 0; 
+            letter-spacing: -1.5px; 
+            line-height: 1.35; 
+            background: linear-gradient(135deg, #00F0FF 0%, #FF66CC 50%, #FFE082 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.95)); 
+        }
+        
+        .sub-title { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 17px; 
+            font-weight: 600; 
+            color: #FFB300; 
+            margin-bottom: 20px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            text-shadow: 2px 2px 5px #000, 0 0 15px rgba(0,0,0,0.9); 
+            line-height: 1.4; 
+        }
+        
+        .prologue { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 16px; 
+            color: #fff; 
+            line-height: 1.6; 
+            margin: auto; 
+            width: 95%; 
+            text-shadow: 2px 2px 5px #000, 0px 0px 15px #000, 0px 0px 25px rgba(0,0,0,0.9); 
+        }
+        
+        .divider { 
+            width: 50px; 
+            height: 2px; 
+            background: #FFD700; 
+            margin: 20px auto; 
+            box-shadow: 0 0 10px rgba(255,215,0,0.6); 
+        }
+        
+        .prologue-en { 
+            font-family: 'Pretendard', sans-serif; 
+            font-size: 13px; 
+            color: #e2e8f0; 
+            line-height: 1.5; 
+            margin: auto; 
+            width: 95%; 
+            text-shadow: 2px 2px 5px #000, 0px 0px 12px #000, 0px 0px 20px rgba(0,0,0,0.9); 
+        }
+    </style>
+</head>
+<body>
+<div class="poster">
+    <div class="gradient-overlay"></div>
+    <div class="cert-marks">
+        <img src="인증마크1.png" class="mark-img" onerror="this.style.display='none'">
+        <img src="인증마크2.png" class="mark-img" onerror="this.style.display='none'">
+    </div>
+    <div class="text-area">
+        <h1 class="main-title"><br>당신이 간절히 원했던 K-팝 보물상자가 열립니다!<br>글로벌 팬덤을 위한 단 하나의 프리미엄 컬렉션.</h1>
+        <div class="sub-title">UNLOCK YOUR FANDOM :<br>THE ULTIMATE K-POP TREASURE BOX</div>
+        
+        <div class="prologue">
+            바다 건너 구하기 힘들었던 한정판 K-팝 굿즈들, 이제 더 이상 헤맬 필요 없습니다.<br>
+            수백만 글로벌 팬들이 그토록 찾아 헤매던 모든 아이템이 이 영롱한 보물상자 속에 담겨 있습니다.<br>
+            가장 빛나는 무대의 감동을 전하는 응원봉부터, 최애 아티스트의 숨결이 닿은 오피셜 굿즈까지.<br>
+            거리의 장벽을 허물고 당신과 아티스트를 가장 빠르고 완벽하게 연결해 줄 궁극의 K-팝 스테이션.<br>
+            당신의 빛나는 팬심을 세상에서 가장 품격 있는 방식으로 완성하세요.
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="prologue-en">
+            No more struggling to find exclusive K-Pop merchandise from across the ocean.<br>
+            Every item that global fans have desperately searched for is now <br>gathered like a treasure within this breathtaking premium box.<br>
+            From the glowing light sticks that capture the magic of the stage to the official goods carrying the essence of your bias.<br>
+            Breaking down the barriers of distance, this is the ultimate K-Pop station<br> that perfectly connects you with your favorite artists.<br>
+            Complete your precious fandom with the most exclusive and accessible collection in the world.
+        </div>
+    </div>
+</div>
+</body>
+</html>
